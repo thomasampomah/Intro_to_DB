@@ -37,7 +37,7 @@ mycursor.execute("""CREATE TABLE Orders (
 
 mycursor.execute("""CREATE TABLE Order_Details(
     orderdetailid (Primary Key)
-    order_id ["FOREIGN (order_id) REFERENCES Orders (order_id)"]
+    order_id ["FOREIGN KEY (order_id) REFERENCES Orders (order_id)"]
     book_id ["FOREIGN KEY (book_id) REFERENCES books(book_id)"
     quantity DOUBLE)""");
 
