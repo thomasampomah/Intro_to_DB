@@ -6,9 +6,9 @@ mydb = mysql.connector.connect(
     password="Tom0244827889!!!",)
 
 
-mycursor = mydb.cursor()
+mycursor = mydb.cursor();
 
-mycursor.execute("SHOW TABLES FROM alx_book_store")
+mycursor.execute("SHOW TABLES FROM alx_book_store;");
 
 mycursor.close()
 mydb.close()
