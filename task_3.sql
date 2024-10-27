@@ -8,7 +8,7 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor();
 
-mycursor.execute("SHOW TABLES FROM alx_book_store;");
+mycursor.execute("SHOW TABLES, USE alx_book_store;");
 
 mycursor.close()
 mydb.close()
