@@ -31,14 +31,14 @@ mycursor.execute("""CREATE TABLE Customers(
 
 mycursor.execute("""CREATE TABLE Orders (
     order_id INT (Primary Key)
-    customer_id INT (Foreign Key) REFERENCES Customers (customer_id))
+    customer_id INT ["FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)"]
     order_date DATE)""");
 
 
 mycursor.execute("""CREATE TABLE Order_Details(
     orderdetailid (Primary Key)
-    order_id (Foreign Key referencing Orders table)
-    book_id (Foreign Key referencing Books table)
+    order_id ["FOREIGN (order_id) REFERENCES Order (order_id)"]
+    book_id ["FOREIGN KEY (book_id) REFERENCES books(customer_id)"
     quantity DOUBLE)""");
 
 mycursor.close()
